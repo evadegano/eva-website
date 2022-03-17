@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Layout, { siteTitle } from '../components/layout';
 import Posts from '../components/posts';
 import { projects } from '../lib/content/projects';
+import { socials } from '../lib/content/socials';
 import utilStyles from '../styles/utils.module.css';
 
 
@@ -17,8 +18,9 @@ export async function getStaticProps() {
   }
 }
 
-
 export default function Projects({ allPostsData }) {
+  const github = socials.find(item => item.name.includes('github'));
+
   return (
     <Layout about>
       <Head>
@@ -27,36 +29,49 @@ export default function Projects({ allPostsData }) {
 
       <div className={`${utilStyles.columnContainer}`}>
         <h1 className={utilStyles.headingXl}>
-          A selection of 
-          <br/>my favorite works
+          Some of my works
         </h1>
       </div>
 
-      <section>
+      <section className={`${utilStyles.rowContainerSm} ${utilStyles.sectionLg}`} style={{columnGap: '20px'}}>
         {projects.map((project, idx) => {
           return (
-            <div key={idx} className={`${utilStyles.hStackLg} ${idx % 2 !== 0 ? utilStyles.reversed : ''}`} style={{columnGap: '40px'}}>
-              <div className={`${utilStyles.columnContainerLeft} ${utilStyles.column}`}>
+            <div key={idx} className={utilStyles.card}>
+              <Image
+                src={project.img}
+                height={100}
+                width={200}
+                alt={'Quartz screenshot'}
+              />
+
+              <div>
                 <h2>{project.name}</h2>
+
                 <p>{project.description}</p>
                 <p>Context: {project.context}</p>
                 <p>stack: {project.stack}</p>
-                <Link href={"/"}><a target={'_blank'}>VIEW LIVE</a></Link>
-                <Link href={"/"}><a target={'_blank'}>SEE CODE</a></Link>
-              </div>
-              
-              <div className={`${utilStyles.column} ${idx % 2 !== 0 ? utilStyles.columnContainerLeft : utilStyles.columnContainerRight}`}>
-                <Image
-                  src={project.img}
-                  height={100}
-                  width={200}
-                  alt={'Quartz screenshot'}
-                />
+
+                <div className={utilStyles.hStack} style={{columnGap: '10px'}}>
+                  {project.url && <Link href={project.url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={project.github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
+                </div>
               </div>
             </div>
           )
         })}
       </section>
+
+      <Link href={github.url}>
+        <a target={'_blank'} className={utilStyles.githubBtn}>
+          <Image 
+            src={github.img}
+            width={30}
+            height={30}
+            alt={github.name}
+          />
+          SEE MORE PROJECTS
+        </a>
+      </Link>
 
       <Posts posts={allPostsData} />
     </Layout>

@@ -30,7 +30,7 @@ export default function About({ allPostsData }) {
           <h1 className={utilStyles.headingXl}>Hi there, I'm Eva!</h1>
 
           <div className={utilStyles.hStack} style={{columnGap: '10px'}}>
-            <Link href={'mailto: eva.degano@gmail.com'}><a className={utilStyles.mainBtn}>MY RESUME</a></Link>
+            <Link href={'mailto: eva.degano@gmail.com'}><a className={utilStyles.mainBtn}>SEE MY RESUME</a></Link>
             <Link href={'mailto: eva.degano@gmail.com'}><a className={utilStyles.mainBtn}>GET IN TOUCH</a></Link>
           </div>
         </div>

@@ -1,10 +1,12 @@
 import Link from "next/link";
+import utilStyles from '../styles/utils.module.css';
 
 
 export default function Navbar(props) {
   return (
     <nav>
-      <div><Link href={'/'}><a>Eva Degano</a></Link></div>
+      <Link href={'/'}><a className={utilStyles.logo}>Eva Degano</a></Link>
+
       <ul>
         {props.navLinks.map((link, idx) => {
           return (

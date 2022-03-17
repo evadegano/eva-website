@@ -1,4 +1,10 @@
 /* Containers */
+.sectionMd {
+  width: 60%;
+}
+.sectionLg {
+  width: 80%;
+}
 .hStack {
   display: flex;
   align-items: center;
@@ -10,20 +16,20 @@
   align-items: center;
   justify-content: space-between;
 }
-.hStack.reversed,
-.hStackLg.reversed {
-  flex-direction: row-reverse;
-}
 .rowContainerSm {
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .rowContainerLg {
+  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .columnContainer {
@@ -58,7 +64,20 @@
 .containerMd {
   width: 60%;
 }
-
+.card {
+  border-radius: 15px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  background: rgb(249,250,251);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding: 40px;
+  width: 40%;
+  height: 100%;
+  margin-bottom: 40px;
+}
 
 /* Text */
 .heading2Xl {
@@ -128,6 +147,10 @@
 .markedText {
   background: var(--accent-color);
 }
+.logo {
+  font-size: 20px;
+  font-weight: 500;
+}
 
 /* Buttons */
 .mainBtn {
@@ -139,4 +162,19 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
-
+.secondaryBtn {
+  border: 2px solid var(--primary-color);
+  font-weight: 400;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.githubBtn {
+  background: var(--dark);
+  color: white;
+  font-weight: 400;
+  padding: 15px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
