@@ -1,0 +1,85 @@
+:root {
+  /* Fonts */
+  --main-font: 'Roboto Mono';
+  /* Colors */
+  --dark: #222222;
+  --light-purple: #e9d8fd;
+  --mid-purple: #805ad5;
+  --dark-purple: #44337a;
+  --neon-purple: #5E17EB;
+  --primary-color: var(--neon-purple);
+  --accent-color: var(--light-purple);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 200;
+  color: var(--dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+li li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+
+nav {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  color: var(--dark);
+}
