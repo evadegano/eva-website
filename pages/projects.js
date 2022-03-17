@@ -1,19 +1,29 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link'
+import { getSortedPostsData } from '../lib/posts';
 import Layout, { siteTitle } from '../components/layout';
+import Posts from '../components/posts';
 import { projects } from '../lib/content/projects';
 import utilStyles from '../styles/utils.module.css';
 
 
-export default function Projects() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
+
+
+export default function Projects({ allPostsData }) {
   return (
     <Layout about>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-
-      
 
       <div className={`${utilStyles.columnContainer}`}>
         <h1 className={utilStyles.headingXl}>
@@ -31,8 +41,8 @@ export default function Projects() {
                 <p>{project.description}</p>
                 <p>Context: {project.context}</p>
                 <p>stack: {project.stack}</p>
-                <Link><a target={'_blank'}>VIEW LIVE</a></Link>
-                <Link><a target={'_blank'}></a>SEE CODE</Link>
+                <Link href={"/"}><a target={'_blank'}>VIEW LIVE</a></Link>
+                <Link href={"/"}><a target={'_blank'}>SEE CODE</a></Link>
               </div>
               
               <div className={`${utilStyles.column} ${idx % 2 !== 0 ? utilStyles.columnContainerLeft : utilStyles.columnContainerRight}`}>
@@ -48,6 +58,7 @@ export default function Projects() {
         })}
       </section>
 
+      <Posts posts={allPostsData} />
     </Layout>
   );
 }

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getSortedPostsData } from '../lib/posts';
 import Layout, { siteTitle } from '../components/layout';
-import Date from '../components/date'
+import Posts from '../components/posts';
 import utilStyles from '../styles/utils.module.css';
 
 
@@ -34,34 +34,7 @@ export default function Home({ allPostsData }) {
         <Link href={'/about'}><a className={utilStyles.mainBtn}>LEARN MORE</a></Link>
       </section>
 
-      <section className={utilStyles.padding1px}>
-      <h2 className={utilStyles.headingMd}>The ultimate guide to start your journey as a Software Engineer</h2>
-      
-      <hr/>
-
-      <p>
-        I love sharing my knowledge through writing!
-        If you have you recently started your journey as a Software Engineer or if you are thinking about doing so, you should find this blog helpful.
-      </p>
-      <p>
-      <p>In there, I share with you the exact strategy and ressources that allowed me to graduate at the top of my Software Engineer program's cohort and feel good about my skills as a Full Stack Web Developer in 6 months.</p>
-      <p>More than that, I hope to take you beyond Programming and show you how exciting Computer Science can be.</p>
-      </p>
-
-      <ul className={utilStyles.list}>
-        {allPostsData.map(({ id, date, title }, idx) => (
-          <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
-              <a>{idx + 1}. {title}</a>
-            </Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={date} />
-            </small>
-          </li>
-        ))}
-      </ul>
-    </section>
+      <Posts posts={allPostsData} />
     </Layout>
   )
 }
