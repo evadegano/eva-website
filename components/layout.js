@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Navbar from './navbar';
 import Footer from './footer';
+import LeftSideBar from './leftSideBar';
+import RightSideBar from './rightSideBar';
 import { navLinks } from "../lib/content/navLinks";
+
 
 const name = 'Eva Degano';
 export const siteTitle = 'Eva Degano';
@@ -32,41 +32,13 @@ export default function Layout({ children, home }) {
 
       <Navbar navLinks={navLinks} />
 
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <div className={styles.imgContainer}>
-              <div className={styles.purpleCirc}></div>
-              
-              <Image
-                priority
-                src="/images/profile.png"
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
-                alt={name}
-              />
-            </div>
-          </>
-        ) : (
-          <>
-          <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.png"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-          </>
-        )}
-      </header>
+      <main>
+        <LeftSideBar/>
 
-      <main>{children}</main>
+        {children}
+
+        {home && <RightSideBar />}
+      </main>
         
       <Footer />
     </div>

@@ -4,29 +4,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.backToHome {
-  margin: 3rem 0 0;
-}
-
-/* Containers */
-.imgContainer {
-  position: relative;
-}
-
-/* Decoration */
-.purpleCirc {
-  position: absolute;
-  top: 0;
-  right: -10%;
-  background: var(--light-purple);
-  border-radius: 50%;
-  height: 144px;
-  width: 144px;
-}

@@ -1,25 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link'
-import { getSortedPostsData } from '../lib/posts';
 import Layout, { siteTitle } from '../components/layout';
-import Posts from '../components/posts';
 import { projects } from '../lib/content/projects';
 import { socials } from '../lib/content/socials';
 import utilStyles from '../styles/utils.module.css';
 
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
-  return {
-    props: {
-      allPostsData
-    }
-  }
-}
-
-export default function Projects({ allPostsData }) {
-  const github = socials.find(item => item.name.includes('github'));
+export default function Projects() {
+  const github = socials.find(item => item.name.includes('Github'));
 
   return (
     <Layout about>
@@ -64,7 +53,7 @@ export default function Projects({ allPostsData }) {
       <Link href={github.url}>
         <a target={'_blank'} className={utilStyles.githubBtn}>
           <Image 
-            src={github.img}
+            src={github.img1}
             width={30}
             height={30}
             alt={github.name}
@@ -72,8 +61,6 @@ export default function Projects({ allPostsData }) {
           SEE MORE PROJECTS
         </a>
       </Link>
-
-      <Posts posts={allPostsData} />
     </Layout>
   );
 }

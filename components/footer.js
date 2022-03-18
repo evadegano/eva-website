@@ -14,11 +14,12 @@ export default function Footer() {
                     <Link href={item.url}>
                       <a target={'_blank'}>
                         <Image 
-                        src={item.img} 
+                        src={item.img1} 
                         alt={item.name}
                         width={30}
                         height={30}
-                      /></a>
+                        />
+                      </a>
                     </Link>
                   </li>
         })}
