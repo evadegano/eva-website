@@ -12,18 +12,14 @@ import {
 
 export default function TechStack() {
   return (
-    <div>
-      <h2 className={utilStyles.headingMd}>Tech stack I use</h2>
-
-      <div className={utilStyles.hStack} style={{columnGap: '10px'}}>
-        <SiPython style={{color: 'black', fontSize: '30px'}} />
-        <SiJavascript style={{color: 'black', fontSize: '30px'}} />
-        <SiTypescript style={{color: 'black', fontSize: '30px'}} />
-        <SiMongodb style={{color: 'black', fontSize: '30px'}} />
-        <SiReact style={{color: 'black', fontSize: '30px'}} />
-        <FaNodeJs style={{color: 'black', fontSize: '30px'}} />
-        <SiExpress style={{color: 'black', fontSize: '30px'}} />
-      </div>
+    <div className={utilStyles.hStack} style={{columnGap: '10px'}}>
+      <SiPython style={{color: 'black', fontSize: '30px'}} />
+      <SiJavascript style={{color: 'black', fontSize: '30px'}} />
+      <SiTypescript style={{color: 'black', fontSize: '30px'}} />
+      <SiMongodb style={{color: 'black', fontSize: '30px'}} />
+      <SiReact style={{color: 'black', fontSize: '30px'}} />
+      <FaNodeJs style={{color: 'black', fontSize: '30px'}} />
+      <SiExpress style={{color: 'black', fontSize: '30px'}} />
     </div>
   );
 }

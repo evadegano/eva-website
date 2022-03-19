@@ -17,7 +17,6 @@
   justify-content: space-between;
 }
 .rowContainerSm {
-  width: 90%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -25,7 +24,6 @@
 }
 
 .rowContainerLg {
-  width: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -37,8 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 40px;
-  padding-right: 40px;
+  gap: 20px;
 }
 .columnContainerLeft {
   display: flex;
@@ -46,7 +43,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.columnContainerRight {
+.columnContainerStretch {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -60,32 +57,42 @@
   max-width: 30%;
 }
 
+.containerXl {
+  width: 100%;
+}
 .containerLg {
   width: 60%;
 }
 .containerMd {
-  width: 40%;
+  width: 48%;
 }
 .containerXs {
   width: 20%;
 }
+
 .card {
-  border-radius: 15px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  background: var(--light-grey);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-  padding: 40px;
-  width: 40%;
-  height: 100%;
-  margin-bottom: 40px;
+  border: 1px solid var(--mid-grey);
+  padding: 20px;
+  min-height: 600px;
+}
+
+.cardImg {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.projectImg {
+  border: 4px solid var(--dark);
+}
+.listIcon {
+  position: relative;
+  width: 30px;
+  height: 30px;
 }
 
 .sideContainer {
-  width: 600px;
+  min-width: 300px;
+  max-width: 300px;
   padding-top: 40px;
   padding: 20px 40px;
 }
@@ -100,7 +107,10 @@
   right: 0;
   top: 100px;
   background: var(--light-grey);
-  height: 80vh;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 .sideContainer p {
   font-size: 16px;
@@ -110,6 +120,9 @@
 }
 .sideContainer li {
   list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .sideContainer li a {
   display: flex;
@@ -192,6 +205,10 @@
 .markedText {
   background: var(--accent-color);
 }
+.boldText {
+  font-weight: 700;
+  color: var(--primary-color);
+}
 .logo {
   font-size: 20px;
   font-weight: 500;
@@ -199,6 +216,7 @@
 
 /* Buttons */
 .mainBtn {
+  border: 2px solid var(--primary-color);
   background: var(--primary-color);
   color: white;
   font-weight: 400;
@@ -206,12 +224,13 @@
   border: none;
   margin-top: 20px;
   margin-bottom: 20px;
+  box-sizing: content-box;
 }
 .secondaryBtn {
   border: 2px solid var(--primary-color);
   font-weight: 400;
   padding: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
   box-sizing: content-box;
 }
@@ -224,11 +243,15 @@
   margin-top: 20px;
   margin-bottom: 20px;
   box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Dividers */
 .divider {
   width: 100%;
-	border-bottom: 1px solid rgb(55 53 47 / 18%);
+	border-bottom: 1px solid var(--mid-grey);
   margin: 20px 0 15px 0;
 }

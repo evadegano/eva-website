@@ -2,18 +2,15 @@
   /* Fonts */
   --main-font: 'Poppins';
   /* Colors */
-  --dark: rgb(55, 53, 47);
-  --light-grey: rgb(249,250,251);
+  --dark: #37352f;
+  --light-grey: #F9F9F9;
+  --mid-grey: rgb(55 53 47 / 18%);
   --light-purple: #e9d8fd;
   --mid-purple: #805ad5;
   --dark-purple: #44337a;
   --neon-purple: #5E17EB;
   --primary-color: var(--neon-purple);
   --accent-color: var(--light-purple);
-  /* Misc */
-  --transition: all .2s ease-in-out;
-	--transition-alt: all 0.8s cubic-bezier(0.2, 1, 0.2, 1);
-	--rounded: 8px;
 }
 
 html,
@@ -27,12 +24,14 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   color: var(--dark);
 }
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
 }
 
 main {
@@ -73,11 +72,13 @@ footer {
   align-items: center;
 }
 
+
 li li {
   list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 10px;
 }
 
 ul {
@@ -86,6 +87,7 @@ ul {
   justify-content: center;
   align-items: flex-start;
   row-gap: 10px;
+  padding-left: 0;
 }
 
 nav {

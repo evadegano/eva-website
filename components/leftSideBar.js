@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
 import { socials } from '../lib/content/socials';
+import TechStack from './techStack';
 
 
 export default function LeftSideBar(){
@@ -16,18 +17,18 @@ export default function LeftSideBar(){
         alt={'Eva Degano'}
       />
 
-      <h2>Main Stack</h2>
-      <p>Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS</p>
+      <h3>Main Stack</h3>
+      <p>Full Stack Web Developer Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS</p>
 
-      <h2>Socials</h2>
+      <h3>Socials</h3>
 
       <ul>
         <li>
           <Image 
             src={'/icons/pin.png'} 
             alt={'location pin icon'}
-            width={25}
-            height={25}
+            width={20}
+            height={20}
             />
           Paris 2, France
         </li>
@@ -37,10 +38,10 @@ export default function LeftSideBar(){
                     <Link href={item.url}>
                       <a target={'_blank'}>
                         <Image 
-                        src={item.img2} 
+                        src={item.img1} 
                         alt={item.name}
-                        width={25}
-                        height={25}
+                        width={20}
+                        height={20}
                         />
                         {item.name}
                       </a>

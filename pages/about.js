@@ -1,9 +1,10 @@
 import Head from 'next/head';
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import { achievements } from '../lib/content/achievements';
+import { technologies, softSkills } from '../lib/content/skills';
 import utilStyles from '../styles/utils.module.css';
-import { BsChevronDoubleDown } from 'react-icons/bs';
 
 
 export default function About() {
@@ -13,21 +14,23 @@ export default function About() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={utilStyles.columnContainerLeft}>
+      <section className={`${utilStyles.columnContainerLeft} ${utilStyles.containerLg}`}>
         {/* header */}
         <h1 className={utilStyles.headingXl}>About</h1>
-        <p className={utilStyles.headingLg}>I feel most alive when I am learning and growing. Ultimately, this means that I am always looking for ways to achieve more and empower myself and others.</p>
+        <p className={utilStyles.headingLg}>I feel most stimulated when I am learning and growing. Ultimately, this means that I am always looking for ways to achieve more and empower myself and others.</p>
         <div className={utilStyles.divider}></div>
         
         {/* achievements */}
-        <h2>Here's how this translates <BsChevronDoubleDown style={{color: 'black', fontSize: '20px'}} /></h2>
+        <h2>Here's how this translates in action</h2>
 
         <div className={utilStyles.rowContainerLg}>
-          {achievements.map((item, idx) => {
-            return  <div className={utilStyles.containerXs} key={idx}>
-                      <h3>{item.year}</h3>
-                      <div>{item.content}</div>
-                    </div>
+          {achievements.reverse().map((item, idx) => {
+            return  (
+              <div className={utilStyles.containerXs} key={idx}>
+                <h3>{item.year}</h3>
+                <div>{item.content}</div>
+              </div>
+            )
           })}
         </div>
 
@@ -36,28 +39,38 @@ export default function About() {
         {/* skills */}
         <div className={utilStyles.rowContainerLg}>
           <div className={utilStyles.containerMd}>
-            <h2>My hard skills</h2>
+            <h2>My tech skills</h2>
 
             <ul>
-              <li>Fluent in English: I am French but I have lived overseas for +10 years (Chad, Denmark, Argentina, China, Australia) and did my studies in English</li>
-              <li>Back end: Python | Flask | ExpressJs | NodeJs | REST APIs | Axios</li>
-              <li>Front end: HTML | CSS | Javascript (ES6) | TypeScript | React | Next.js</li>
-              <li>Data: noSQL (MongoDb) | SQL (PostgreSQL & SQLite)</li>
-              <li>Environment: Git | Github | Test Driven Development</li>
-              <li>Deployment: Heroku</li>
+              {technologies.map((item, idx) => {
+                return <li key={idx}><span className={utilStyles.markedText}>{item.type}:</span> {item.content}</li>
+              })}
             </ul>
           </div>
 
           <div className={utilStyles.containerMd}>
-            <h2>My soft skills</h2>
-
-            <p>As a Digital Project Manager for key clients for +4 years:</p>
+            <h2>My softer skills</h2>
 
             <ul>
-              <li>I am used to working with cross-functional, international teams</li>
-              <li>I am comfortable with producing high quality deliverables in tight deadlines</li>
-              <li>I am centered on results and lean processes</li>
-              <li>I have an eye for UX/UI and web design</li>
+              <li><span className={utilStyles.markedText}>Fluent in English:</span> I am French but I have lived overseas for +10 years (Chad, Denmark, Argentina, China, Australia) and did my studies in English</li>
+              <li>
+                As a Digital Project Manager for key clients for +4 years:
+                <ul>
+                  {softSkills.map((item, idx) => {
+                    return  <li key={idx}>
+                              <div className={utilStyles.listIcon}>
+                                <Image 
+                                  src={item.icon}
+                                  layout={'fill'} 
+                                  objectFit={'contain'}
+                                  alt={'icon'}
+                                />
+                              </div>
+                              {item.content}
+                            </li>
+                  })}
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -71,12 +84,14 @@ export default function About() {
 
             <ul>
               <li>Join a company where I can build a strong foundation as a Programmer: this means being part of a team that is passionate about their product and about tech, as well as a company that promotes continious learning</li>
-              <li>Study blockchain engineering (Solidity, Truffle, blockchains architecture, smart contracts,...)</li>
+              <li>Study blockchain engineering (Solidity, Truffle, blockchains architecture, smart contracts,...) because I think it's the future!</li>
             </ul>
           </div>
 
           <div className={utilStyles.containerMd}>
-            <h2>My soft skills</h2>
+            <h2>What I am about</h2>
+
+            <p>I love going out, working out (running and yoga, though I plan on doing boxing and dancing as well in 2022), just being active in general. Also, I am always up for a good chat or a good afterwork!</p>
           </div>
         </div>
 
