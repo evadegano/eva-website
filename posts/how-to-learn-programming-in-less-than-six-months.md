@@ -4,8 +4,6 @@ date: '2022-01-31'
 ---
 
 
-## Study
-
 Depending on what your goals are, your journey to becoming a programmer will vary greatly!
 What I give you below is the system I followed to maximize my learning in the shortest time possible.
 But depending on your goals and constraintes, you may want to skip some of those steps or dig deeper.
@@ -40,4 +38,21 @@ Anyway, here are some tips I can give you:
 - So whenever the voice in your head tells you “damn that’s hard”, say to yourself “in just a few days, I will smile at how easy this actually is for me now”
 - Think in a structured way. Coding is similar to writing a dissertation (only a lot more fun). Instead of writing a bunch of code right away, the easiest way to go about it is to write down a structure through comments or pseudo code, and then fill it in.
 - When learning, don't try to memorize every built-in function right away: that's what practice is for
-- 
+
+4. Some core concepts you need to learn:
+- Four main programming paradigms
+- Testing
+- Databases
+  - SQL or relational databases:
+    - most used type of databases
+    - stores data in rows and columns: each column receives an entity (ex: name, age, is married) and entities are related in some way
+  - noSQL or non-relational databases:
+    - most recent and gaining in popularity
+    - stores data in 
+    - benefits: fast, no fixed table schemas, scalable, simple design
+- APIs (Application Programming Interfaces): software that allow users and databases to talk to each other
+  - REST API
+
+5. Some additional concepts you may want to learn if your looking for a back-end position
+- GraphQL
+- Systems design

@@ -32,7 +32,7 @@ export default function Blog({ allPostsData }) {
 
         <div className={utilStyles.divider}></div>
 
-        <h2>How to jump-start your journey as a Software Engineer</h2>
+        <h2 className={utilStyles.headingLg}>How to jump-start your journey as a Software Engineer</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }, idx) => (
             <li className={utilStyles.listItem} key={id}>

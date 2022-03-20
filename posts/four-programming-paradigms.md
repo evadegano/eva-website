@@ -1,0 +1,50 @@
+---
+title: 'Four programming paradigms'
+date: '2022-01-31'
+---
+
+In this post, I assume that you have some knowledge of the programming jargon.
+
+Programming paradigms are not languages, but ways of using those languages. Like a writing style. The influence how your code is organized.
+
+Paradigms help classify languages based on their features, though a certain language can be used for different paradigms.
+
+## 1. Functional programming
+- super popular
+- functional programming focuses on, well functions
+- So basically, ou organize things into functions
+- functions = they input data and output data
+- pure functional = functions don't store state and don't mutate the incoming data (their paramaters)
+
+Strengths:
+- as states are not modified (no writing operation), you don't have to worry about concurrency and threading because we're not sharing memory
+- in pure functional programming, functions tend to be short
+- code tends to be clean, which reduces bugs and makes it easy to test
+
+## 2. Object-oriented programming
+- in OO programming, things are organized into objects (classes)
+- object = a way of encapsulating state and behavior
+- state = variables
+- behavior = what you do with states (methods)
+
+Strengths:
+- great at modeling real life objects and their attributes (ex: a car, its color, engine, brand, etc)
+- they are reusable
+- they are easy to test
+
+## 3. Modular programming
+- separate each functionality into an independent file (module)
+
+strengths:
+- very organized
+- easy to navigate
+- easy to test, maintain and debugg
+
+## 4. Concurrent programming
+- maximizes the use of a computer's finite ressources by overlapping some program computations (instead of running them one after the other)
+- uses a computer architecture concept called multi-threading
+
+## 3. Procedural
+- based on formal logic: and, or implications
+- not made up of instructions but of facts and clauses
+- 

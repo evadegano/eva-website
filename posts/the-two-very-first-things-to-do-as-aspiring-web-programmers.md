@@ -1,5 +1,5 @@
 ---
-title: 'The two very first things to do as aspiring Web Programmers'
+title: 'Two unusual things to start with to become Web Programmer'
 date: '2022-01-01'
 ---
 
@@ -26,7 +26,7 @@ After all, we're the average of the people we surround ourselves with aren't we?
 
 
 ## Live and breath tech
-Everytime you open your computer, I want you to stumble on tech stuff.
+Everytime you open your computer, when you search something on Google, when you take a break on Youtube, I want you to stumble on tech stuff.
 
 Some of the ressources you have to use:
 - Product Hunt

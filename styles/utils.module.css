@@ -10,6 +10,11 @@
   align-items: center;
   justify-content: center;
 }
+.hStackLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .hStackLg {
   width: 100%;
   display: flex;
@@ -70,19 +75,16 @@
   width: 20%;
 }
 
-.card {
-  border: 1px solid var(--mid-grey);
-  padding: 20px;
-  min-height: 600px;
-}
-
 .cardImg {
   position: relative;
   width: 100%;
   height: 250px;
 }
+
 .projectImg {
-  border: 4px solid var(--dark);
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .listIcon {
   position: relative;
@@ -130,6 +132,17 @@
   gap: 10px;
   color: inherit;
 }
+.projectsTable {
+  gap: 20px;
+}
+.projectsTable td {
+  width: 47%;
+  vertical-align: top;
+}
+
+.projectsTable tr td:nth-child(2) {
+  width: 30px;
+}
 
 /* Text */
 .heading2Xl {
@@ -157,7 +170,7 @@
 .headingLg {
   font-family: var(--main-font);
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.4;
   margin: 1rem 0;
 }
@@ -210,8 +223,8 @@
   color: var(--primary-color);
 }
 .logo {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 /* Buttons */
@@ -234,18 +247,11 @@
   margin-bottom: 20px;
   box-sizing: content-box;
 }
-.githubBtn {
-  background: var(--dark);
-  color: white;
-  font-weight: 400;
-  padding: 15px;
-  border: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-sizing: content-box;
+.simpleBtn {
+  color: var(--primary-color);
+  font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
 }
 

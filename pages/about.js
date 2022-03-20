@@ -42,6 +42,9 @@ export default function About() {
             <h2>My tech skills</h2>
 
             <ul>
+              <li>Proficient with functional programming and object oriented design patterns</li>
+              <li>Understanding of sorting, binary search trees and graph searching algorithms</li>
+
               {technologies.map((item, idx) => {
                 return <li key={idx}><span className={utilStyles.markedText}>{item.type}:</span> {item.content}</li>
               })}
@@ -55,21 +58,23 @@ export default function About() {
               <li><span className={utilStyles.markedText}>Fluent in English:</span> I am French but I have lived overseas for +10 years (Chad, Denmark, Argentina, China, Australia) and did my studies in English</li>
               <li>
                 As a Digital Project Manager for key clients for +4 years:
-                <ul>
-                  {softSkills.map((item, idx) => {
-                    return  <li key={idx}>
-                              <div className={utilStyles.listIcon}>
-                                <Image 
-                                  src={item.icon}
-                                  layout={'fill'} 
-                                  objectFit={'contain'}
-                                  alt={'icon'}
-                                />
-                              </div>
-                              {item.content}
-                            </li>
-                  })}
-                </ul>
+                <table>
+                  <tbody>
+                    {softSkills.map((item, idx) => {
+                      return  <tr key={idx}>
+                                <td>
+                                  <Image 
+                                    src={item.icon}
+                                    width={60}
+                                    height={60}
+                                    alt={'icon'}
+                                  />
+                                </td>
+                                <td>{item.content}</td>
+                              </tr>
+                    })}
+                  </tbody>
+                </table>
               </li>
             </ul>
           </div>
@@ -83,26 +88,16 @@ export default function About() {
             <h2>My goals for the next 2 years</h2>
 
             <ul>
-              <li>Join a company where I can build a strong foundation as a Programmer: this means being part of a team that is passionate about their product and about tech, as well as a company that promotes continious learning</li>
-              <li>Study blockchain engineering (Solidity, Truffle, blockchains architecture, smart contracts,...) because I think it's the future!</li>
+              <li><span className={utilStyles.markedText}>Join a company where I can build a strong foundation as a Programmer:</span> this means being part of a team that is passionate about their product and about tech in general, as well as a company that promotes continuous learning.</li>
+              <li><span className={utilStyles.markedText}>Study blockchain engineering</span> (Solidity, Truffle, blockchains architecture, smart contracts, ...) because I think it's the future!</li>
             </ul>
           </div>
 
           <div className={utilStyles.containerMd}>
-            <h2>What I am about</h2>
+            <h2>And also...</h2>
 
-            <p>I love going out, working out (running and yoga, though I plan on doing boxing and dancing as well in 2022), just being active in general. Also, I am always up for a good chat or a good afterwork!</p>
+            <p>I love going out, working out - mainly running, yoga and fitness but I am down to try all sports. And of course, I am always up for a good chat and a drink after work!</p>
           </div>
-        </div>
-
-        <div className={utilStyles.divider}></div>
-
-        {/* contact */}
-        <h2>Want to know more?</h2>
-
-        <div className={utilStyles.hStack} style={{columnGap: '10px'}}>
-          <Link href={'https://drive.google.com/file/d/1az4CTXsZeyXkKtp8o_U3TSb-vsl2Yc9U/view?usp=sharing'}><a className={utilStyles.mainBtn} target={'_blank'}>SEE MY RESUME</a></Link>
-          <Link href={'mailto:eva.degano@gmail.com'}><a className={utilStyles.mainBtn}>GET IN TOUCH</a></Link>
         </div>
       </section>
     </Layout>

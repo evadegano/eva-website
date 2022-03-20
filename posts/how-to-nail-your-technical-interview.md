@@ -22,10 +22,14 @@ With a bit of practice - about 10 hours of it - recursions will start making sen
 
 And you'll see how f*cking cool they are. Recursion is definitely this thing that makes you answer problems elegantly and feel proud about your problem-solving skills.
 
-## 3. Study the most common data structures
+## 3. Study the most common data structures and algorithms
+
+While data structure are ways to store and organize data, algorithms process that data and perform calculations to find a solution to a problem.
 
 ### Linked lists
+
 https://www.youtube.com/watch?v=Hj_rA0dhr2I&t=4609s
+
 
 ### Binary trees
 https://www.youtube.com/watch?v=fAAZixBzIAI&ab_channel=freeCodeCamp.org

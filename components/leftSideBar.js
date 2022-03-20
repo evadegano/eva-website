@@ -17,8 +17,20 @@ export default function LeftSideBar(){
         alt={'Eva Degano'}
       />
 
-      <h3>Main Stack</h3>
-      <p>Full Stack Web Developer Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS</p>
+      <h3>In a nutshell</h3>
+      <p>Full Stack / Back-End Web Developer / Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS</p>
+      <Link href={'https://drive.google.com/file/d/1az4CTXsZeyXkKtp8o_U3TSb-vsl2Yc9U/view?usp=sharing'}>
+        <a className={utilStyles.simpleBtn} target={'_blank'}>
+          
+          <Image 
+            src="/icons/download.png"
+            height={20}
+            width={20}
+            alt={'download icon'}
+          />
+          MY RESUME
+        </a>
+      </Link>
 
       <h3>Socials</h3>
 

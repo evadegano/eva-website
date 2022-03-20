@@ -17,58 +17,153 @@ export default function Projects() {
       </Head>
 
       <section className={`${utilStyles.columnContainerLeft} ${utilStyles.containerLg}`}>
-        <h1 className={utilStyles.headingXl}>
-          Some of my works
-        </h1>
+        <h1 className={utilStyles.headingXl}>Some of my works</h1>
 
-        <div className={utilStyles.rowContainerLg}>
-          {projects.map((project, idx) => {
-            return (
-              <div key={idx} className={`${utilStyles.containerMd} ${utilStyles.columnContainer}`}>
-                <div className={utilStyles.cardImg}>
-                  <Image
+        <table className={utilStyles.projectsTable}>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  priority
+                  src={projects[0].img}
                   className={utilStyles.projectImg}
-                    src={project.img}
-                    layout={'fill'} 
-                    objectFit={'contain'}
-                    alt={'Quartz screenshot'}
-                  />
+                  layout={'fill'} 
+                  objectFit={'contain'}
+                  alt={`${projects[0].name} screenshot`}
+                />
+              </td>
+
+              <td></td>
+
+              <td>
+                <img
+                  priority
+                  src={projects[1].img}
+                  className={utilStyles.projectImg}
+                  layout={'fill'} 
+                  objectFit={'contain'}
+                  alt={`${projects[1].name} screenshot`}
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <h2>{projects[0].name}</h2>
+                <p>{projects[0].description}</p>
+                <h3>Context</h3>
+                <p>{projects[0].context}</p>
+                <h3>Stack</h3>
+                <p>{projects[0].stack}</p>
+              </td>
+
+              <td></td>
+
+              <td>
+                <h2>{projects[1].name}</h2>
+                <p>{projects[1].description}</p>
+                <h3>Context</h3>
+                <p>{projects[1].context}</p>
+                <h3>Stack</h3>
+                <p>{projects[1].stack}</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div className={utilStyles.hStackLeft} style={{columnGap: '10px'}}>
+                  {projects[0].url && <Link href={projects[0].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={projects[0].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
                 </div>
-                
-                <div className={utilStyles.card}>
-                  <h2>{project.name}</h2>
+              </td>
 
-                  <p>{project.description}</p>
+              <td></td>
 
-                  <h3>Context</h3>
-                  <p>{project.context}</p>
-
-                  <h3>Stack</h3>
-                  <p>{project.stack}</p>
-
-                  <div className={utilStyles.hStack} style={{columnGap: '10px'}}>
-                    {project.url && <Link href={project.url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
-                    <Link href={project.github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
-                  </div>
+              <td>
+                <div className={utilStyles.hStackLeft} style={{columnGap: '10px'}}>
+                  {projects[1].url && <Link href={projects[1].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={projects[1].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
                 </div>
-              </div>
-            )
-          })}
-        </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <img
+                  priority
+                  src={projects[2].img}
+                  className={utilStyles.projectImg}
+                  layout={'fill'} 
+                  objectFit={'contain'}
+                  alt={`${projects[2].name} screenshot`}
+                />
+              </td>
+
+              <td></td>
+
+              <td>
+                <img
+                  priority
+                  src={projects[3].img}
+                  className={utilStyles.projectImg}
+                  layout={'fill'} 
+                  objectFit={'contain'}
+                  alt={`${projects[3].name} screenshot`}
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <h2>{projects[0].name}</h2>
+                <p>{projects[0].description}</p>
+                <h3>Context</h3>
+                <p>{projects[0].context}</p>
+                <h3>Stack</h3>
+                <p>{projects[0].stack}</p>
+              </td>
+
+              <td></td>
+
+              <td>
+                <h2>{projects[1].name}</h2>
+                <p>{projects[1].description}</p>
+                <h3>Context</h3>
+                <p>{projects[1].context}</p>
+                <h3>Stack</h3>
+                <p>{projects[1].stack}</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div className={utilStyles.hStackLeft} style={{columnGap: '10px'}}>
+                  {projects[0].url && <Link href={projects[0].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={projects[0].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
+                </div>
+              </td>
+
+              <td></td>
+
+              <td>
+                <div className={utilStyles.hStackLeft} style={{columnGap: '10px'}}>
+                  {projects[1].url && <Link href={projects[1].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={projects[1].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
 
         <div className={utilStyles.divider}></div>
 
         <Link href={github.url}>
-          <a target={'_blank'} className={utilStyles.githubBtn}>
-            <Image 
-              src={github.img1}
-              width={30}
-              height={30}
-              alt={github.name}
-            />
-            SEE MORE PROJECTS
+          <a target={'_blank'}>
+          Check out my other projects &gt;
           </a>
         </Link>
+
       </section>
     </Layout>
   );

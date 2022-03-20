@@ -7,7 +7,6 @@
   --mid-grey: rgb(55 53 47 / 18%);
   --light-purple: #e9d8fd;
   --mid-purple: #805ad5;
-  --dark-purple: #44337a;
   --neon-purple: #5E17EB;
   --primary-color: var(--neon-purple);
   --accent-color: var(--light-purple);
@@ -73,12 +72,8 @@ footer {
 }
 
 
-li li {
-  list-style: none;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
+li td {
+  padding-left: 15px;
 }
 
 ul {
@@ -120,4 +115,6 @@ footer li {
 
 nav a {
   color: var(--dark);
+  font-weight: 600;
+  font-size: 18px;
 }
