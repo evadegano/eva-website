@@ -65,8 +65,8 @@ export default function About() {
                                 <td>
                                   <Image 
                                     src={item.icon}
-                                    width={60}
-                                    height={60}
+                                    width={100}
+                                    height={100}
                                     alt={'icon'}
                                   />
                                 </td>
