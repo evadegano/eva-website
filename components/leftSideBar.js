@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
 import { socials } from '../lib/content/socials';
-import TechStack from './techStack';
 
 
 export default function LeftSideBar(){

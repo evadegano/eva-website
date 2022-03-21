@@ -18,7 +18,7 @@ export default function Home() {
         <p className={utilStyles.headingLg}>A Full Stack Web Developer based in Paris.</p>
 
         <p>
-          After getting a Master's Degree in Finance and Investment and working as a Project Manager, working with developers made me realize that Computer Science and Programming were my true passions.
+          After getting a Master's Degree in Finance and Investment and being a Project Manager for +4 years, working with developers made me realize that Computer Science and Programming were my true passions.
           <br/><span className={utilStyles.markedText}>I deeply value learning and sharing knowledge through content and tools that improve people's lives.</span> And tech is what makes it possible at scale.
           That's one of the many reasons why I decided to become a Software Engineer.
         </p>
