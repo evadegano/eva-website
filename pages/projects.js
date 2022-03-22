@@ -22,27 +22,39 @@ export default function Projects() {
           <tbody>
             <tr>
               <td>
-                <img
-                  priority
-                  src={projects[0].img}
-                  className={utilStyles.projectImg}
-                  layout={'fill'} 
-                  objectFit={'contain'}
-                  alt={`${projects[0].name} screenshot`}
-                />
+
+                <Link href={projects[0].readme}>
+                  <a target={'_blank'}>
+                    <img
+                      priority
+                      src={projects[0].img}
+                      className={utilStyles.projectImg}
+                      layout={'fill'} 
+                      objectFit={'contain'}
+                      alt={`${projects[0].name} screenshot`}
+                    />
+                  </a>
+                </Link>
+                
               </td>
 
               <td></td>
 
               <td>
-                <img
-                  priority
-                  src={projects[1].img}
-                  className={utilStyles.projectImg}
-                  layout={'fill'} 
-                  objectFit={'contain'}
-                  alt={`${projects[1].name} screenshot`}
-                />
+
+                <Link href={projects[1].readme}>
+                  <a target={'_blank'}>
+                    <img
+                      priority
+                      src={projects[1].img}
+                      className={utilStyles.projectImg}
+                      layout={'fill'} 
+                      objectFit={'contain'}
+                      alt={`${projects[1].name} screenshot`}
+                    />
+                  </a>
+                </Link>
+
               </td>
             </tr>
 
@@ -88,57 +100,65 @@ export default function Projects() {
 
             <tr>
               <td>
-                <img
-                  priority
-                  src={projects[2].img}
-                  className={utilStyles.projectImg}
-                  layout={'fill'} 
-                  objectFit={'contain'}
-                  alt={`${projects[2].name} screenshot`}
-                />
+                <Link href={projects[2].readme}>
+                  <a target={'_blank'}>
+                    <img
+                      priority
+                      src={projects[2].img}
+                      className={utilStyles.projectImg}
+                      layout={'fill'} 
+                      objectFit={'contain'}
+                      alt={`${projects[2].name} screenshot`}
+                    />
+                  </a>
+                </Link>
               </td>
 
               <td></td>
 
               <td>
-                <img
-                  priority
-                  src={projects[3].img}
-                  className={utilStyles.projectImg}
-                  layout={'fill'} 
-                  objectFit={'contain'}
-                  alt={`${projects[3].name} screenshot`}
-                />
+                <Link href={projects[3].readme}>
+                  <a target={'_blank'}>
+                    <img
+                      priority
+                      src={projects[3].img}
+                      className={utilStyles.projectImg}
+                      layout={'fill'} 
+                      objectFit={'contain'}
+                      alt={`${projects[3].name} screenshot`}
+                    />
+                  </a>
+                </Link>
               </td>
             </tr>
 
             <tr>
               <td>
-                <h2>{projects[0].name}</h2>
-                <p>{projects[0].description}</p>
+                <h2>{projects[2].name}</h2>
+                <p>{projects[2].description}</p>
                 <h3>Context</h3>
-                <p>{projects[0].context}</p>
+                <p>{projects[2].context}</p>
                 <h3>Stack</h3>
-                <p>{projects[0].stack}</p>
+                <p>{projects[2].stack}</p>
               </td>
 
               <td></td>
 
               <td>
-                <h2>{projects[1].name}</h2>
-                <p>{projects[1].description}</p>
+                <h2>{projects[3].name}</h2>
+                <p>{projects[3].description}</p>
                 <h3>Context</h3>
-                <p>{projects[1].context}</p>
+                <p>{projects[3].context}</p>
                 <h3>Stack</h3>
-                <p>{projects[1].stack}</p>
+                <p>{projects[3].stack}</p>
               </td>
             </tr>
 
             <tr>
               <td>
                 <div className={utilStyles.hStackLeft} style={{columnGap: '10px'}}>
-                  {projects[0].url && <Link href={projects[0].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
-                  <Link href={projects[0].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
+                  {projects[2].url && <Link href={projects[2].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={projects[2].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
                 </div>
               </td>
 
@@ -146,8 +166,8 @@ export default function Projects() {
 
               <td>
                 <div className={utilStyles.hStackLeft} style={{columnGap: '10px'}}>
-                  {projects[1].url && <Link href={projects[1].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
-                  <Link href={projects[1].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
+                  {projects[3].url && <Link href={projects[3].url}><a target={'_blank'} className={utilStyles.mainBtn}>VIEW LIVE</a></Link>}
+                  <Link href={projects[3].github}><a target={'_blank'} className={utilStyles.secondaryBtn}>SEE CODE</a></Link>
                 </div>
               </td>
             </tr>

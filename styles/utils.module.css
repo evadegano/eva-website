@@ -132,9 +132,7 @@
   gap: 10px;
   color: inherit;
 }
-.projectsTable {
-  gap: 20px;
-}
+
 .projectsTable td {
   width: 47%;
   vertical-align: top;
