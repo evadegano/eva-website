@@ -38,7 +38,7 @@ export default function Layout({ children, home }) {
 
         {children}
 
-        {home && <RightSideBar />}
+        {/*home && <RightSideBar />*/}
       </main>
         
       <Footer />
