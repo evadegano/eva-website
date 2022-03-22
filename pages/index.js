@@ -11,7 +11,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${utilStyles.columnContainerLeft} ${utilStyles.containerXl}`}>
+      <section className={`${utilStyles.columnContainerLeft} ${utilStyles.containerLg}`}>
 
         <h1 className={utilStyles.headingXl}>Hey, I'm Eva.</h1>
 
