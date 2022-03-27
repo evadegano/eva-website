@@ -23,7 +23,7 @@ export default function Layout({ children, home }) {
         />
         <meta
           property="og:image"
-          content={"/images/profile.png"}
+          content={"/images/social-preview.png"}
         />
         <meta name="og:title" content={siteTitle} />
         <meta property="og:type" content="website" />

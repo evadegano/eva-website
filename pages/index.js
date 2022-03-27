@@ -9,6 +9,16 @@ export default function Home() {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta
+          property="og:image"
+          content={"/images/social-preview.png"}
+        />
+        <meta name="og:title" content={siteTitle} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content="Full Stack Developer / Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS"
+        />
       </Head>
 
       <section className={`${utilStyles.columnContainerLeft} ${utilStyles.containerLg}`}>
