@@ -22,14 +22,6 @@ export default function Layout({ children, home }) {
           content="Eva Degano's portfolio"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="og:url" content="www.evadegano.com/" />
-        <meta property="og:type" content="website" />
-        <meta name="og:title" content={siteTitle} />
-        <meta property="og:image" content={"/images/social-preview.png"} />
-        <meta
-          property="og:description"
-          content="Full Stack Developer / Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS"
-        />
       </Head>
 
       <Navbar navLinks={navLinks} />
