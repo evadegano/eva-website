@@ -21,17 +21,15 @@ export default function Layout({ children, home }) {
           name="description"
           content="Eva Degano's portfolio"
         />
-        <meta
-          property="og:image"
-          content={"/images/social-preview.png"}
-        />
-        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:url" content="evadegano.com" />
         <meta property="og:type" content="website" />
+        <meta name="og:title" content={siteTitle} />
+        <meta property="og:image" content={"/images/social-preview.png"} />
         <meta
           property="og:description"
           content="Full Stack Developer / Python, JavaScript (ES6) & TypeScript, MongoDB, Express, React, NodeJS, HTML & CSS"
         />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <Navbar navLinks={navLinks} />
