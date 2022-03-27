@@ -82,6 +82,8 @@ ul {
   justify-content: center;
   align-items: flex-start;
   row-gap: 10px;
+}
+#aboutPage ul {
   padding-left: 0;
 }
 

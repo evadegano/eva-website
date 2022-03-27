@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Image from 'next/image';
 import Layout, { siteTitle } from '../components/layout';
 import { achievements } from '../lib/content/achievements';
@@ -14,7 +13,7 @@ export default function About() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={`${utilStyles.columnContainerLeft} ${utilStyles.containerLg}`}>
+      <section id='aboutPage' className={`${utilStyles.columnContainerLeft} ${utilStyles.containerLg}`}>
         {/* header */}
         <h1 className={utilStyles.headingXl}>About</h1>
         <p className={utilStyles.headingLg}>I feel most stimulated when I am learning and growing. Ultimately, this means that I am always looking for ways to achieve more and empower myself and others.</p>

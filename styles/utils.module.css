@@ -224,6 +224,9 @@
   font-size: 25px;
   font-weight: 700;
 }
+.logo:hover {
+  text-decoration: none;
+}
 
 /* Buttons */
 .mainBtn {

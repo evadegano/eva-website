@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import Layout from '../../components/layout';
 import { getMDXComponent } from "mdx-bundler/client";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import utilStyles from '../../styles/utils.module.css';
 
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ code, frontmatter }) {
-  const Component = useMemo(() => getMDXComponent(code), [code]);
+  const PostContent = useMemo(() => getMDXComponent(code), [code]);
 
   return (
     <Layout>
@@ -43,7 +43,7 @@ export default function Post({ code, frontmatter }) {
         </div>
 
         <div>
-          <Component />
+          <PostContent id='post-content' />
         </div>
       </article>
     </Layout>
