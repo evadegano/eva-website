@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Script from 'next/script';
 import styles from './layout.module.css';
 import Navbar from './navbar';
 import Footer from './footer';
